@@ -1,4 +1,4 @@
-package com.jsjchai.springboot.demo.model;
+package com.github.jsjchai.springboot.demo.model;
 
 import lombok.Getter;
 import lombok.Setter;

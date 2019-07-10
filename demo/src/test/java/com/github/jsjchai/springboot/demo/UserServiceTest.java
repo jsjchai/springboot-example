@@ -1,9 +1,9 @@
-package com.jsjchai.springboot.demo;
+package com.github.jsjchai.springboot.demo;
 
 import static org.junit.Assert.assertTrue;
 
-import com.jsjchai.springboot.demo.model.User;
-import com.jsjchai.springboot.demo.service.UserService;
+import com.github.jsjchai.springboot.demo.model.User;
+import com.github.jsjchai.springboot.demo.service.UserService;
 import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;

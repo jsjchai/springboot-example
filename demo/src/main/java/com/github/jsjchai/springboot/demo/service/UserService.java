@@ -1,6 +1,6 @@
-package com.jsjchai.springboot.demo.service;
+package com.github.jsjchai.springboot.demo.service;
 
-import com.jsjchai.springboot.demo.model.User;
+import com.github.jsjchai.springboot.demo.model.User;
 
 import java.util.List;
 

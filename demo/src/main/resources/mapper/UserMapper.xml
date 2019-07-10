@@ -2,16 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jsjchai.springboot.demo.dao.UserDao">
+<mapper namespace="com.github.jsjchai.springboot.demo.dao.UserDao">
 
 
-    <select id="finaAll" resultType="com.jsjchai.springboot.demo.model.User">
+    <select id="finaAll" resultType="com.github.jsjchai.springboot.demo.model.User">
         SELECT
             id,username,email
         FROM user
     </select>
 
-    <select id="getById" resultType="com.jsjchai.springboot.demo.model.User">
+    <select id="getById" resultType="com.github.jsjchai.springboot.demo.model.User">
         SELECT
             id,username,email
         FROM user
