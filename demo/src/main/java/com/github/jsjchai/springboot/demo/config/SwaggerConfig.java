@@ -1,4 +1,4 @@
-package com.jsjchai.springboot.demo.config;
+package com.github.jsjchai.springboot.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

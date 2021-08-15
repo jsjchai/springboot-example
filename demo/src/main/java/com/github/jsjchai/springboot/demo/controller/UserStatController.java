@@ -1,4 +1,4 @@
-package com.jsjchai.springboot.demo.controller;
+package com.github.jsjchai.springboot.demo.controller;
 
 
 import io.micrometer.core.instrument.Counter;
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 @RestController
 @Api(tags = {"用户"})
 @RequestMapping("/user")
-public class UserController {
+public class UserStatController {
 
     @Autowired
     private MeterRegistry registry;
