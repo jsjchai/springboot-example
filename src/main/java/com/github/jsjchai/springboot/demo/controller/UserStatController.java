@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 
 @RestController
 @Api(tags = {"用户"})
-@RequestMapping("/user")
+@RequestMapping("/user/stat")
 public class UserStatController {
 
     @Autowired
