@@ -1,12 +1,11 @@
-package com.jsjchai.springboot.demo.service.impl;
+package com.github.jsjchai.springboot.demo.service.impl;
 
 
-import com.jsjchai.springboot.demo.dao.UserDao;
-import com.jsjchai.springboot.demo.model.User;
-import com.jsjchai.springboot.demo.service.UserService;
+import com.github.jsjchai.springboot.demo.dao.UserDao;
+import com.github.jsjchai.springboot.demo.model.User;
+import com.github.jsjchai.springboot.demo.service.UserService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,8 +14,11 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Resource
-    private UserDao userDao;
+    private final  UserDao userDao;
+
+    public UserServiceImpl(UserDao userDao){
+        this.userDao = userDao;
+    }
 
     @Override
     public List<User> finadAll() {

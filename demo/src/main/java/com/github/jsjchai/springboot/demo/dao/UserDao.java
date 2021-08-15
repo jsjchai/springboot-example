@@ -1,6 +1,6 @@
-package com.jsjchai.springboot.demo.dao;
+package com.github.jsjchai.springboot.demo.dao;
 
-import com.jsjchai.springboot.demo.model.User;
+import com.github.jsjchai.springboot.demo.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

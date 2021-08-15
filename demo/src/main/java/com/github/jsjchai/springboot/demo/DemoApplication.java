@@ -1,4 +1,4 @@
-package com.jsjchai.springboot.demo;
+package com.github.jsjchai.springboot.demo;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Value;
