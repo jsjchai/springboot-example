@@ -3,19 +3,14 @@ package com.github.jsjchai.springboot.demo.controller;
 import com.github.jsjchai.springboot.demo.model.User;
 import com.github.jsjchai.springboot.demo.query.UserQuery;
 import com.github.jsjchai.springboot.demo.service.UserService;
-import java.util.List;
-
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@Tag(name="UserStatController",description="用户")
+@Tag(name = "UserStatController", description = "用户")
 @RequestMapping("/user")
 public class UserController {
 
@@ -25,26 +20,29 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/findAll")
-    @Operation( summary = "查询所有用户信息")
-    public List<User> findAll() {
-        return userService.finadAll();
+    @GetMapping("/getAllUsers")
+    @Operation(summary = "查询所有用户信息")
+    public List<User> getAllUsers() {
+        return userService.findAll();
     }
 
-    /**
-     * 根据id查询用户信息
-     * @param id 用户id
-     * @return  用户信息
-     */
-    @Operation( summary = "根据id查询用户信息")
-    @PostMapping(value = "/getById",produces="application/x-www-form-urlencoded;charset=UTF-8")
-    public User getById(@RequestParam Long id){
-        return userService.getById(id);
+    @GetMapping(value = "/getUserById")
+    @Operation(summary = "根据id查询用户信息")
+    public User getUserById(@RequestParam Long id) {
+        User user = userService.getById(id);
+        if (user == null) {
+            throw new RuntimeException("User not found with id " + id);
+        }
+        return user;
     }
 
-    @Operation( summary = "查询用户信息")
-    @PostMapping(value = "/getByJson",produces="application/json;charset=UTF-8")
-    public User getByJson(@RequestBody UserQuery param){
-        return userService.getById(param.getId());
+    @GetMapping(value = "/getUser")
+    @Operation(summary = "查询用户信息")
+    public User getUser(@RequestBody UserQuery param) {
+        User user = userService.getById(param.getId());
+        if (user == null) {
+            throw new RuntimeException("User not found with id " + param.getId());
+        }
+        return user;
     }
 }

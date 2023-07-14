@@ -14,7 +14,7 @@ public interface UserService {
      * 查询所有用户
      * @return
      */
-    List<User> finadAll();
+    List<User> findAll();
 
     User getById(Long id);
 }

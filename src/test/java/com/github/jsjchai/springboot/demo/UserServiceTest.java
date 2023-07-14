@@ -20,7 +20,7 @@ public class UserServiceTest {
 
     @Test
     public void testFindAll() {
-        List<User> list = userService.finadAll();
+        List<User> list = userService.findAll();
         assertTrue(list.size() > 0);
     }
 }

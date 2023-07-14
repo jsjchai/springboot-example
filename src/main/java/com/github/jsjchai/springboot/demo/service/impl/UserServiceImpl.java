@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> finadAll() {
+    public List<User> findAll() {
         return userDao.finaAll();
     }
 
